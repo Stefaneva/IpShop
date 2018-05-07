@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -19,10 +20,10 @@
 	    </div>
 	    <ul class="nav navbar-nav">
 	      <li class="active"><a href="index.jsp">Home</a></li>
-	      <li><a href="${pageContext.request.contextPath}/afisProdServlet?idCategorie=${1}" >Telefoane</a></li>
-	      <li><a href="${pageContext.request.contextPath}/afisProdServlet?idCategorie=${2}" >Televizoare</a></li>
-	      <li><a href="${pageContext.request.contextPath}/afisProdServlet?idCategorie=${3}" >Laptopuri</a></li>
-	      <li><a href="${pageContext.request.contextPath}/afisProdServlet?idCategorie=${4}" >Tablete</a></li>
+	      <li><a href="${pageContext.request.contextPath}/AfisareProduse?idCategorie=${1}" >Telefoane</a></li>
+	      <li><a href="${pageContext.request.contextPath}/AfisareProduse?idCategorie=${2}" >Televizoare</a></li>
+	      <li><a href="${pageContext.request.contextPath}/AfisareProduse?idCategorie=${3}" >Laptopuri</a></li>
+	      <li><a href="${pageContext.request.contextPath}/AfisareProduse?idCategorie=${4}" >Tablete</a></li>
 	      </ul>
 	  </div>
 	</nav>
