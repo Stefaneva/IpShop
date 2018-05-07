@@ -51,5 +51,4 @@ public class RegisterController extends HttpServlet{
 			System.out.println(e);
 		}
 	}
-
 }
