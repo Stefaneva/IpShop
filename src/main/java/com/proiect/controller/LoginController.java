@@ -43,7 +43,7 @@ public class LoginController extends HttpServlet{
 			String password = request.getParameter("password");
 
 			Useri user = null;
-			user = useriDAO.findUser(username, con);
+			user = useriDAO.findUser(username, password, con);
 			if (user == null) {
 				String mesaj = "Username/parola incorecte";
 				HttpSession session = request.getSession(true);
@@ -55,7 +55,7 @@ public class LoginController extends HttpServlet{
 				HttpSession session = request.getSession(true);
 				session.setAttribute("eroare", mesaj);
 				response.sendRedirect("login.jsp");
-			} else {
+			} if(user != null){
 				HttpSession session = request.getSession(true);
 				session.setAttribute("iduser", user.getId_user());
 				session.setAttribute("userCurent", user);

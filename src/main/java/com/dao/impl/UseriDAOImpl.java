@@ -19,9 +19,10 @@ public class UseriDAOImpl implements UseriDAO{
 		ps.executeUpdate();
 	}
 
-	public Useri findUser(String email, Connection con) throws SQLException {
-		PreparedStatement ps=con.prepareStatement("select * from useri where email=?");
+	public Useri findUser(String email,String password, Connection con) throws SQLException {
+		PreparedStatement ps=con.prepareStatement("select * from useri where email=? and parola=?");
 		ps.setString(1,email);
+		ps.setString(2,password);
 		ResultSet rs=ps.executeQuery();
 		Useri user = null;
 		if(rs.next())
